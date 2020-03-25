@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1584544543 source:c:\ntnu\prog1003-prosjekt\lesdata3.cpp
+	<iostream>
+	<iomanip>
+	<cctype>
+	<cstdlib>
+	"LesData3.h"
+
+1584544537 c:\ntnu\prog1003-prosjekt\lesdata3.h
+
+1585140397 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
+	<iostream>
+	<string>
+	"Kunder.h"
+	"Kunde.h"
+
+1585142359 source:c:\ntnu\prog1003-prosjekt\main.cpp
+	<iostream>
+	"Kunder.h"
+	"Soner.h"
+	"Funksjoner.h"
+	"LesData3.h"
+
+1585078464 c:\ntnu\prog1003-prosjekt\kunder.h
+	<list>
+	"Kunde.h"
+
+1585077641 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
+	<iostream>
+	<string>
+	"Kunde.h"
+
+1585077647 c:\ntnu\prog1003-prosjekt\kunde.h
+	<string>
+	<vector>
+
+1585142422 c:\ntnu\prog1003-prosjekt\funksjoner.h
+
+1585142550 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
+	<iostream>
+	<string>
+	"Kunder.h"
+	"Soner.h"
+	"Funksjoner.h"
+
+1585142344 source:c:\ntnu\prog1003-prosjekt\sone.cpp
+	<iostream>
+	<string>
+	<map>
+	"Sone.h"
+
+1585143317 source:c:\ntnu\prog1003-prosjekt\soner.cpp
+	<iostream>
+	"Soner.h"
+	"Sone.h"
+
+1585132502 source:c:\ntnu\prog1003-prosjekt\bolig.cpp
+
+1585142564 c:\ntnu\prog1003-prosjekt\soner.h
+	<map>
+	"Sone.h"
+
+1585141660 c:\ntnu\prog1003-prosjekt\sone.h
+	<string>
+
