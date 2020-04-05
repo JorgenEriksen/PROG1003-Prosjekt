@@ -31,7 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../Bolig.cpp" />
+		<Unit filename="../Bolig.h" />
 		<Unit filename="../Class.h" />
+		<Unit filename="../Const.h" />
+		<Unit filename="../Enebolig.cpp" />
+		<Unit filename="../Enebolig.h" />
 		<Unit filename="../Funksjoner.cpp" />
 		<Unit filename="../Funksjoner.h" />
 		<Unit filename="../Kunde.cpp" />
@@ -41,6 +46,10 @@
 		<Unit filename="../LesData3.cpp" />
 		<Unit filename="../LesData3.h" />
 		<Unit filename="../Main.cpp" />
+		<Unit filename="../Sone.cpp" />
+		<Unit filename="../Sone.h" />
+		<Unit filename="../Soner.cpp" />
+		<Unit filename="../Soner.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

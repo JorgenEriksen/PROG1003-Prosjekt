@@ -14,6 +14,8 @@ class Kunder  {
         void leggTil();
         void visAlle();
         void visEnKunde(int tall);
+        void endreKunde(int nr);
+        void slettKunde(int nr);
 };
 
 

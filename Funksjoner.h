@@ -2,10 +2,17 @@
 #define Funksjoner_H
 
 void nyKunde();
-void visAlleKunder();
 void visEnkeltKunde();
+void visAlleKunder(); ;
+void endreKunde();
+void slettKunde();
+void kundeOversikt();
 void nySone();
-void visAlleSoner();
 void visEnkeltSoner();
+void visAlleSoner();
+void nyttOppdrag();
+void visEnkeltOppdrag();
+void slettOppdrag();
+void skrivMeny();
 
 #endif

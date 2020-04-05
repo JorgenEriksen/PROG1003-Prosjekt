@@ -9,8 +9,11 @@ class Soner  {
         int sisteNr = 0;
         std::map <int, Sone*> sone;
     public:
-        void leggTil();
+        void leggTil(int soneNr);
         void visAlle();
+        void visSoneNummer();
+        bool omSoneEksisterer(int soneNr);
+        void leggTilOppdrag(int soneNr);
 };
 
 #endif

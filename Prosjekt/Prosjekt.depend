@@ -1,65 +1,92 @@
 # depslib dependency file v1.0
-1584544543 source:c:\ntnu\prog1003-prosjekt\lesdata3.cpp
+1584548143 source:c:\ntnu\prog1003-prosjekt\lesdata3.cpp
 	<iostream>
 	<iomanip>
 	<cctype>
 	<cstdlib>
 	"LesData3.h"
 
-1584544537 c:\ntnu\prog1003-prosjekt\lesdata3.h
+1584548137 c:\ntnu\prog1003-prosjekt\lesdata3.h
 
-1585140397 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
+1585908406 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
 	<iostream>
 	<string>
+	"LesData3.h"
 	"Kunder.h"
 	"Kunde.h"
 
-1585142359 source:c:\ntnu\prog1003-prosjekt\main.cpp
+1585649312 source:c:\ntnu\prog1003-prosjekt\main.cpp
 	<iostream>
 	"Kunder.h"
 	"Soner.h"
 	"Funksjoner.h"
 	"LesData3.h"
 
-1585078464 c:\ntnu\prog1003-prosjekt\kunder.h
+1585655890 c:\ntnu\prog1003-prosjekt\kunder.h
 	<list>
 	"Kunde.h"
 
-1585077641 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
+1585914701 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
 	<iostream>
 	<string>
 	"Kunde.h"
+	"Soner.h"
+	"LesData3.h"
+	"Const.h"
 
-1585077647 c:\ntnu\prog1003-prosjekt\kunde.h
+1585908786 c:\ntnu\prog1003-prosjekt\kunde.h
 	<string>
 	<vector>
+	"Const.h"
 
-1585142422 c:\ntnu\prog1003-prosjekt\funksjoner.h
+1585485433 c:\ntnu\prog1003-prosjekt\funksjoner.h
 
-1585142550 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
+1585655098 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
 	<iostream>
 	<string>
 	"Kunder.h"
 	"Soner.h"
 	"Funksjoner.h"
+	"Const.h"
+	"LesData3.h"
 
-1585142344 source:c:\ntnu\prog1003-prosjekt\sone.cpp
+1586079766 source:c:\ntnu\prog1003-prosjekt\sone.cpp
 	<iostream>
 	<string>
 	<map>
 	"Sone.h"
+	"Bolig.h"
+	"Enebolig.h"
 
-1585143317 source:c:\ntnu\prog1003-prosjekt\soner.cpp
+1586079779 source:c:\ntnu\prog1003-prosjekt\soner.cpp
 	<iostream>
+	"LesData3.h"
 	"Soner.h"
 	"Sone.h"
 
-1585132502 source:c:\ntnu\prog1003-prosjekt\bolig.cpp
+1585227925 source:c:\ntnu\prog1003-prosjekt\bolig.cpp
+	<iostream>
+	"Bolig.h"
+	"LesData3.h"
 
-1585142564 c:\ntnu\prog1003-prosjekt\soner.h
+1585645712 c:\ntnu\prog1003-prosjekt\soner.h
 	<map>
 	"Sone.h"
 
-1585141660 c:\ntnu\prog1003-prosjekt\sone.h
+1586079903 c:\ntnu\prog1003-prosjekt\sone.h
 	<string>
+	<vector>
+	"Bolig.h"
+
+1586083194 source:c:\ntnu\prog1003-prosjekt\enebolig.cpp
+	"Enebolig.h"
+
+1586083210 c:\ntnu\prog1003-prosjekt\bolig.h
+	<string>
+	"Const.h"
+
+1585475333 c:\ntnu\prog1003-prosjekt\const.h
+
+1586083029 c:\ntnu\prog1003-prosjekt\enebolig.h
+	"Bolig.h"
 

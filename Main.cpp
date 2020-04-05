@@ -26,17 +26,28 @@ int main(){
     gKunder = new Kunder;
     gSoner = new Soner;
 
+    // cin >> aar >> ant;
+    // cin.ignore();
+
     kommando = lesChar("\nKommando");
 
     while (kommando != 'Q') {
         switch (kommando) {
-            case 'N':   nyKunde(); break;
-            case 'A':   visAlleKunder(); break;
+            case 'A':   nyKunde(); break;
             case 'B':   visEnkeltKunde(); break;
-            case 'C':   nySone(); break;
-            case 'D':   visAlleSoner(); break;
-            case 'E':   visEnkeltSoner(); break;
-            case 'X':   break;
+            case 'C':   visAlleKunder(); break;
+            case 'D':   endreKunde(); break;
+            case 'E':   slettKunde(); break;
+            case 'F':   kundeOversikt(); break;
+
+            case 'G':   nySone(); break;
+            case 'H':   visEnkeltSoner(); break;
+            case 'I':   visAlleSoner(); break;
+
+            case 'J':   nyttOppdrag(); break;
+            case 'K':   visEnkeltOppdrag(); break;
+            case 'L':   slettOppdrag(); break;
+            default:    skrivMeny();
         }
         kommando = lesChar("\nKommando");
     }

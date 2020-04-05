@@ -3,6 +3,8 @@
 #include <map>
 
 #include "Sone.h"
+#include "Bolig.h"
+#include "Enebolig.h"
 
 using namespace std;
 
@@ -20,3 +22,13 @@ void Sone :: skrivHovedData(){
 void Sone :: skrivAllData(){
     skrivHovedData();
 };
+
+void Sone :: nyLeilighet(int sisteNr){
+    Bolig* nyBolig = new Bolig(sisteNr);
+    bolig.push_back(nyBolig);
+}
+
+void Sone :: nyEnebolig(int sisteNr){
+    // Bolig* nyBolig = new Enebolig(sisteNr);
+    // bolig.push_back(nyBolig);
+}
