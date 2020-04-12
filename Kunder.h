@@ -4,21 +4,23 @@
 #include <list>
 #include "Kunde.h"
 
+/**
+ *  Kunder (med sist registrerte kundenummer og en liste med kunder)
+ */
 class Kunder  {
     private:
         int sisteNr = 0;
         std::list <Kunde*> kunde;
-
     public:
-        Kunder();
+        void leggTil(std::ifstream & inn);
         void leggTil();
         void visAlle();
-        void visEnKunde(int tall);
-        void endreKunde(int nr);
-        void slettKunde(int nr);
+        void visEnKunde(int kNr);
+        void endreKunde(int kNr);
+        void slettKunde(int kNr);
+        void skrivOversiktTilFil(int kNr);
+        void skriTilFil(std::ofstream & ut);
 };
-
-
 
 #endif
 

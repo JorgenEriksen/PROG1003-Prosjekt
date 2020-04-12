@@ -1,20 +1,55 @@
+ /**
+ *   @file     Kunde.cpp
+ *   @author   Jørgen Eriksen
+ */
+
 #include <iostream>
 #include <string>
-
 #include "Kunde.h"
 #include "Soner.h"
-
 #include "LesData3.h"
 #include "Const.h"
-
 using namespace std;
 
 extern Soner* gSoner;
 
-Kunde :: Kunde(){
-    cout << "\nher2";
+/**
+ *  Leser inne alle datamedlemmer fra fil
+ *
+ *  @param   kundeNummer - kundens unike kundenummer
+ *  @param   inn - filen det leses inn fra
+ */
+Kunde :: Kunde(int kundeNummer, ifstream & inn){
+    char bolig;
+    int antallSoner;
+    int sone;
+
+    kundeNr = kundeNummer;
+    inn >> telefonNr;
+    inn.ignore();
+    getline(inn, navn);
+    getline(inn, gateadresse);
+    getline(inn, postadresse);
+    getline(inn, mail);
+    inn >> bolig;
+    switch(bolig){
+        case 'L': boligtype = Leilighet; break;
+        case 'E': boligtype = EBolig; break;
+    }
+    inn >> antallSoner;
+    for(int i = 0; i<antallSoner; i++){
+        inn >> sone;
+        soneNr.push_back(sone);
+    }
+
+    skrivAllData();
 }
 
+/**
+ *  Leser inne alle datamedlemmer
+ *
+ *  @param   kundeNummer - kundens unike kundenummer
+ */
 Kunde :: Kunde(int kundeNummer){
     int soneNummer;
     char bolig;
@@ -22,20 +57,20 @@ Kunde :: Kunde(int kundeNummer){
     kundeNr = kundeNummer;
     cout << "\nnavn: ";
     getline(cin, navn);
+    telefonNr = lesInt("telefonnummer: ", 20000000, 99999999);
     cout << "gateadresse: ";
     getline(cin, gateadresse);
     cout << "postadresse: ";
     getline(cin, postadresse);
     cout << "emailadresse: ";
     getline(cin, mail);
-
     do{
         bolig = lesChar("Interresert i leilighet eller enebolig (L/E)?");
     } while(bolig != 'L' && bolig != 'E');
 
     switch(bolig){
         case 'L': boligtype = Leilighet; break;
-        case 'E': boligtype = Enebolig; break;
+        case 'E': boligtype = EBolig; break;
     }
 
     do{
@@ -45,28 +80,37 @@ Kunde :: Kunde(int kundeNummer){
         } else {
             cout << "\nsone " << soneNummer << " eksisterer ikke";
         }
-    } while(lesChar("\nlegg til ny sone? (y/n)") == 'Y');
+    } while(lesChar("\nlegg til ny/annen sone? (y/n)") == 'Y');
 
 }
 
+/**
+ *  Skriver ut kundenummer og navn
+ */
 void Kunde :: skrivHovedData(){
     cout << "\nKundenummer: " << kundeNr;
     cout << "\nnavn: " << navn;
-
 }
 
+/**
+ *  Skriver ut all data om kunde
+ */
 void Kunde :: skrivAllData(){
     skrivHovedData();
+    cout << "\ntelefonnummer: " << telefonNr;
     cout << "\ngateadresse: " << gateadresse;
     cout << "\npostadresse: " << postadresse;
     cout << "\nmail: " << mail;
     cout << "\nAntall soner interresert i: " <<soneNr.size();
     cout << "\nSoner interresert i: ";
-    for(int i = 0; i<soneNr.size(); i++){
-        cout << soneNr[i] << " ";
+    for(int val : soneNr){
+        cout << val << " ";
     }
 }
 
+/**
+ *  Legger til eller fjerner soner på kunden
+ */
 void Kunde :: endreData(){
     int soneNummer;
     char valg;
@@ -101,17 +145,27 @@ void Kunde :: endreData(){
 
 }
 
+/**
+ *  returnerer kundenummer
+ *
+ *  @return kundens unike nummer/ID
+ */
 int Kunde :: returKundeNr(){
     return kundeNr;
 }
 
-// sørger for at ny sone blir lagt inn i sortert rekkefølge
+
+/**
+ *  Legger til ny sone på kunden i sortert rekkefølge
+ *
+ *  @param   soneNummer - sonenummer som skal legges til
+ */
 void Kunde :: leggTilSone(int soneNummer){
-    bool leggTilBak = true;       // soneNummer skal legges bakerst om denne holder seg true etter loopen
+    bool leggTilBak = true;                          // soneNummer skal legges bakerst om denne holder seg true etter loopen
     for(int i = 0; i<soneNr.size(); i++){
-        if(soneNr[i] > soneNummer && leggTilBak){
-            auto itPos = soneNr.begin()+i;
-            soneNr.insert(itPos, soneNummer);
+        if(soneNr[i] > soneNummer && leggTilBak){    // denne vil maks være true en gang pga leggTilBak
+            auto itPos = soneNr.begin()+i;           // finner posisjonen sonenummeret skal legges inn i
+            soneNr.insert(itPos, soneNummer);        // legges inn (i sortert rekkefølge)
             leggTilBak = false;
             cout << "\nSone " << soneNummer << " lagt på kunden!";
         } else if (soneNr[i] == soneNummer){
@@ -120,8 +174,59 @@ void Kunde :: leggTilSone(int soneNummer){
         }
     }
 
-    if(leggTilBak){
+    if(leggTilBak){ // sonenummer skal legges inn bakerst
         soneNr.push_back(soneNummer);
+    }
+
+}
+
+/**
+ *  Skriver alle datamedlemmer (både kunde og soner) til fil
+ *
+ *  @see Soner::skrivOversiktTilFil(...)
+ */
+void Kunde :: skrivOversiktTilFil(){
+    string filnavn = "K";
+    filnavn.append(to_string(kundeNr) + ".DTA");
+    ofstream utfil(filnavn);
+    utfil << "*********************";
+    utfil << "\nOversikt for kunde " << kundeNr;
+    utfil << "\n*********************";
+    utfil << "\n\nnavn: " << navn;
+    utfil << "\ntelefonnummer: " << telefonNr;
+    utfil << "\nmail: " << mail;
+    utfil << "\n\ngateadresse: " << gateadresse;
+    utfil << "\npostadresse: " << postadresse;
+    utfil << "\n\ninteressert i ";
+    if(boligtype == Leilighet) utfil << "leilighet";
+    else utfil << "enebolig";
+    if(soneNr.size() < 1) utfil << "\n\ningen interesserte soner/områder registrert foreløpig";
+    else utfil << " i følgende soner/områder: ";
+    for(int val : soneNr){
+        gSoner->skrivOversiktTilFil(val, utfil);
+    }
+
+    cout << "\noversikt over kunde " << kundeNr << " er lagret i " << filnavn;
+
+}
+
+/**
+ *  Skriver alle datamedlemmer til fil
+ *
+ *  @param   ut - filen det skrives til
+ */
+void Kunde :: skrivTilFil(ofstream & ut){
+    // trenger ikke å skrive kundenummer til fil, da det blir lagt inn riktig ved innlesning pga. sortering
+    if(kundeNr != 1) ut << '\n'; // en av flere mulige løsninger for å hindre at det blir et linjeskift formye i starten/slutten.
+    ut << telefonNr << ' ' << navn << '\n';
+    ut << gateadresse << '\n';
+    ut << postadresse << '\n';
+    ut << mail << '\n';
+    if(boligtype == Leilighet) ut << 'L';
+    else ut << 'E';
+    ut << ' ' << soneNr.size();
+    for(int val : soneNr){
+        ut << ' ' << val;
     }
 
 }

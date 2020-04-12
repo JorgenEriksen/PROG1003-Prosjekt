@@ -1,14 +1,17 @@
 /**
+ *   Prosjekt oppgave i PROG1003
  *
- *
+ *   Programmet fungerer som et program for eiendomsmeglere,
+ *   hvor man kan registrere kunder, boligområder, og oppdrag/boliger.
  *
  *   @file     main.cpp
+ *   @date     13.04.2020
  *   @author   Jørgen Eriksen
  */
 
-
-#include <iostream>
-
+#include <iostream>      // cout
+#include <string>        // string
+#include<bits/stdc++.h>  // stringstream
 #include "Kunder.h"
 #include "Soner.h"
 #include "Funksjoner.h"
@@ -19,38 +22,51 @@ using namespace std;
 Kunder* gKunder;
 Soner* gSoner;
 
+/**
+ *  Hovedprogrammet
+ */
 int main(){
-
-    char kommando;
+    string input;
+    char forsteKommando;
+    char andreKommando;
+    int nummer;
 
     gKunder = new Kunder;
     gSoner = new Soner;
 
-    // cin >> aar >> ant;
-    // cin.ignore();
+    lesFraFil();
 
-    kommando = lesChar("\nKommando");
+    cout << "\nKommando: ";
+    getline(cin, input);
+    stringstream kommando(input);
+    kommando >> forsteKommando;   // første tegn
+    kommando >> andreKommando;    // andre tegn
+    kommando >> nummer;           // evt. tredje tegn
+    forsteKommando = toupper(forsteKommando);
+    andreKommando = toupper(andreKommando);
 
-    while (kommando != 'Q') {
-        switch (kommando) {
-            case 'A':   nyKunde(); break;
-            case 'B':   visEnkeltKunde(); break;
-            case 'C':   visAlleKunder(); break;
-            case 'D':   endreKunde(); break;
-            case 'E':   slettKunde(); break;
-            case 'F':   kundeOversikt(); break;
-
-            case 'G':   nySone(); break;
-            case 'H':   visEnkeltSoner(); break;
-            case 'I':   visAlleSoner(); break;
-
-            case 'J':   nyttOppdrag(); break;
-            case 'K':   visEnkeltOppdrag(); break;
-            case 'L':   slettOppdrag(); break;
+    while (forsteKommando != 'Q') {
+        switch (forsteKommando) {
+            case 'K':   kunde(andreKommando, nummer);    break;
+            case 'S':   sone(andreKommando, nummer);     break;
+            case 'O':   oppdrag(andreKommando, nummer);  break;
             default:    skrivMeny();
         }
-        kommando = lesChar("\nKommando");
+
+        // gjør kommandoene blank, så verdien ikke henger igjen om brukeren bare trykker enter f.eks.
+        forsteKommando = ' ';
+        andreKommando = ' ';
+        nummer = 0;
+
+        cout << "\nKommando: ";
+        getline(cin, input);
+        stringstream kommando(input);
+        kommando >> forsteKommando;  // første tegn
+        kommando >> andreKommando;   // andre tegn
+        kommando >> nummer;          // evt. tredje tegn
+        forsteKommando = toupper(forsteKommando);
+        andreKommando = toupper(andreKommando);
     }
 
-
+    skrivTilFil(); // skriver ut data til KUNDER-DTA og SONER.DTA
 }

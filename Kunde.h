@@ -3,13 +3,17 @@
 
 #include <string>
 #include <vector>
-#include "Const.h"
+#include <fstream>
+#include "Enum.h"
 
 
+/**
+ *  Kunde (med kundenummer, telefonnummer, navn, gate, postadresse, mailadresse, boligtype og interesserte soner).
+ */
 class Kunde  {
     private:
         int kundeNr,
-            telefon;
+            telefonNr;
         std::string navn,
                     gateadresse,
                     postadresse,
@@ -17,13 +21,15 @@ class Kunde  {
         Boligtype boligtype;
         std::vector <int> soneNr;
     public:
-        Kunde();
+        Kunde(int kundeNummer, std::ifstream & inn);
         Kunde(int kundeNummer);
         void skrivHovedData();
         void skrivAllData();
         void endreData();
         int returKundeNr();
         void leggTilSone(int soneNummer);
+        void skrivOversiktTilFil();
+        void skrivTilFil(std::ofstream & ut);
 
 };
 

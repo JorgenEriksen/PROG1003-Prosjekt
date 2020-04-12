@@ -1,5 +1,5 @@
-#ifndef CLASS_H
-#define CLASS_H
+#ifndef Class_h
+#define Class_h
 
 class Kunder  {
     private:

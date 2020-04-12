@@ -1,9 +1,14 @@
-#ifndef Bolig_H
-#define Bolig_H
+#ifndef Bolig_h
+#define Bolig_h
 
 #include <string>
-#include "Const.h" // skal denne bort?
+#include <fstream>
+#include "Enum.h"
 
+/**
+ *  bolig (med bolignummer, dato, byggeår, bruttoareal, antall soverom, pris,
+ *  navn på saksbehandler, eier, gate, postadresse, beskrivelse og boligtype).
+ */
 class Bolig {
     private:
         int boligNr,
@@ -17,11 +22,15 @@ class Bolig {
                gateadresse,   // gate+nr
                postadresse,   // nr+sted
                beskrivelse;
-        Boligtype bolig;
+        Boligtype boligtype;
     public:
+        Bolig(std::ifstream & inn);
         Bolig(int soneNummer);
-
-
+        void setSomEnebolig();
+        virtual int returBoligNr();
+        virtual void skrivData();
+        virtual void skrivOversiktTilFil(std::ofstream & ut);
+        virtual void skrivTilFil(std::ofstream & ut);
 };
 
 

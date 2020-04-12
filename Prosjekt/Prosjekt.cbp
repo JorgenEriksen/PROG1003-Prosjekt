@@ -37,6 +37,7 @@
 		<Unit filename="../Const.h" />
 		<Unit filename="../Enebolig.cpp" />
 		<Unit filename="../Enebolig.h" />
+		<Unit filename="../Enum.h" />
 		<Unit filename="../Funksjoner.cpp" />
 		<Unit filename="../Funksjoner.h" />
 		<Unit filename="../Kunde.cpp" />
@@ -50,6 +51,8 @@
 		<Unit filename="../Sone.h" />
 		<Unit filename="../Soner.cpp" />
 		<Unit filename="../Soner.h" />
+		<Unit filename="KUNDER.DTA" />
+		<Unit filename="SONER.DTA" />
 		<Extensions>
 			<code_completion />
 			<envvars />
