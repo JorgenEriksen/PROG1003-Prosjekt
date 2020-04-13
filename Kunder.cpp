@@ -15,9 +15,9 @@ using namespace std;
  *
  *  @param   inn - filen det leses inn fra
  */
-void Kunder :: leggTil(int tlf, ifstream & inn){
-    sisteNr++;
-    Kunde* nyKunde = new Kunde(tlf, sisteNr, inn);
+void Kunder :: leggTil(int kNr, ifstream & inn){
+    sisteNr = kNr;
+    Kunde* nyKunde = new Kunde(sisteNr, inn);
     kunde.push_back(nyKunde);
 }
 
@@ -64,7 +64,6 @@ void Kunder :: visEnKunde(int kNr){
     if(!fantKunde){                          // om kundenummer ikke eksisterer
         cout << "\nugyldig kundenummer!";
     }
-
 }
 
 /**
@@ -100,7 +99,6 @@ void Kunder :: slettKunde(int kNr){
         if(val->returKundeNr() == kNr) {   // om kundenummer finnes
             sKunde = val;                  // lagrer kunden så den kan bli slettet utenfor loopen
             fantKunde = true;              // registrerer at kundenummeret fins
-
         }
     }
 
@@ -109,9 +107,7 @@ void Kunder :: slettKunde(int kNr){
         switch(svar){
             case 'Y':
                 kunde.remove(sKunde);               // sletter kunden
-                kunde.sort();                       // sorterer kunde listen
-                cout << "\nKunden er slettet!";
-                break;
+                cout << "\nKunden er slettet!"; break;
             default:                                // om ikke Y blir inskrevet
                 cout << "\nAvbryter sletting av kunde";
         }

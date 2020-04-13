@@ -1,0 +1,228 @@
+*********************
+Oversikt for kunde 3
+*********************
+
+navn: Cato
+telefonnummer: 98653210
+mail: catomannen@gmail.com
+
+gateadresse: Blomstervegen 54
+postadresse: 2829 Moelv
+
+interessert i enebolig i følgende soner/områder: 
+
+sone/område 1 - Hamar nord
+	oppdrag 1
+		dato: 20191011
+		boligtype: leilighet
+		byggear: 1999
+		bruttoareal: 140
+		antall soverom: 3
+		pris: 2400000
+		saksbehandler: Ola
+		eier: Rune
+		gateadresse: Hamarvegen 55
+		postadresse: 2929 Hamar
+		beskrivelse: God standard, nï¿½r alt, beskjeden beliggenhet, moderne preg, praktisk romlosning, klar for snarlig overtakelse, omkostninger pï¿½ 56000,-
+	oppdrag 2
+		dato: 20190503
+		boligtype: leilighet
+		byggear: 2010
+		bruttoareal: 150
+		antall soverom: 4
+		pris: 2800000
+		saksbehandler: Ola
+		eier: Geir
+		gateadresse: Utsiktsvegen 81
+		postadresse: 2929 Hamar
+		beskrivelse: Veldig god standard, nï¿½r matbutikk og skole, fin beliggenhet, moderne preg, romslig, klar for snarlig overtakelse, omkostninger pï¿½ 58000,-
+	oppdrag 3
+		dato: 20200203
+		boligtype: enebolig
+		byggear: 1975
+		bruttoareal: 121
+		antall soverom: 1
+		pris: 1900000
+		saksbehandler: Siri
+		eier: Trude
+		gateadresse: Stokkvegen 4
+		postadresse: 2932 Hamar
+		beskrivelse: koselig liten enebolig, gammelt preg, trengs en liten oppussing, fin utsikt, under 200 meter til nï¿½rmeste butikk, omkostninger pï¿½ 49000,-
+		areal: 190
+		selveiet: ja
+	oppdrag 4
+		dato: 20200404
+		boligtype: enebolig
+		byggear: 1988
+		bruttoareal: 139
+		antall soverom: 2
+		pris: 2100000
+		saksbehandler: Siri
+		eier: Morten
+		gateadresse: Stokkvegen 22
+		postadresse: 2932 Hamar
+		beskrivelse: koselig enebolig, noe gammelt preg, stor og fin hade, fin utsikt, koselig nabolag, omkostninger pï¿½ 49000,-
+		areal: 210
+		selveiet: nei
+
+sone/område 2 - Moelv vest
+	oppdrag 5
+		dato: 20191201
+		boligtype: leilighet
+		byggear: 2001
+		bruttoareal: 140
+		antall soverom: 3
+		pris: 2400000
+		saksbehandler: Geir
+		eier: Rune
+		gateadresse: Moelvvegen 15
+		postadresse: 2813 Moelv
+		beskrivelse: God standard, rett ved strandlinjen, koselig beliggenhet, moderne preg, store rom, klar for snarlig overtakelse, omkostninger pï¿½ 56000,-
+	oppdrag 6
+		dato: 20181122
+		boligtype: leilighet
+		byggear: 2005
+		bruttoareal: 150
+		antall soverom: 4
+		pris: 2800000
+		saksbehandler: Ola
+		eier: Geir
+		gateadresse: Blomstervegen 91
+		postadresse: 2818 Moelv
+		beskrivelse: HÃ¸y standard, Fin natur med mye tur muligheter, fin beliggenhet, ok utsikt, klar for snarlig overtakelse, omkostninger pï¿½ 58000,-
+	oppdrag 7
+		dato: 20170911
+		boligtype: enebolig
+		byggear: 1999
+		bruttoareal: 211
+		antall soverom: 1
+		pris: 3100000
+		saksbehandler: Vegard
+		eier: Trude
+		gateadresse: Jernvegen 42
+		postadresse: 2818 Moelv
+		beskrivelse: Stor enebolig, gammelt preg, trengs en liten oppussing, fin utsikt, under 300 meter til nï¿½rmeste butikk, omkostninger pï¿½ 49000,-
+		areal: 260
+		selveiet: ja
+	oppdrag 8
+		dato: 20200225
+		boligtype: enebolig
+		byggear: 1989
+		bruttoareal: 189
+		antall soverom: 2
+		pris: 2100000
+		saksbehandler: Vegard
+		eier: Morten
+		gateadresse: Melvegen 18
+		postadresse: 2813 Moelv
+		beskrivelse: koselig og romslig enebolig, stor altan med fin hage, fin utsikt, koselig nabolag, omkostninger pï¿½ 49000,-
+		areal: 210
+		selveiet: nei
+
+sone/område 11 - Hamar sentrum
+	oppdrag 9
+		dato: 20190619
+		boligtype: leilighet
+		byggear: 2011
+		bruttoareal: 170
+		antall soverom: 3
+		pris: 2400000
+		saksbehandler: Ola
+		eier: Rune
+		gateadresse: Sentrumvegen 55
+		postadresse: 2929 Hamar
+		beskrivelse: Veldig god standard, midt i sentrum, skjelden mulighet, kult design, mega stort bad, klar for snarlig overtakelse, omkostninger pï¿½ 56000,-
+	oppdrag 10
+		dato: 20181224
+		boligtype: leilighet
+		byggear: 2000
+		bruttoareal: 158
+		antall soverom: 4
+		pris: 2500000
+		saksbehandler: Siri
+		eier: Geir
+		gateadresse: Rettvegen 81
+		postadresse: 2930 Hamar
+		beskrivelse: Ok standar, moderne fliser i gangen og badet, god beliggenhet, kult og moderne preg, generelt fin, klar for snarlig overtakelse, omkostninger pï¿½ 58000,-
+	oppdrag 11
+		dato: 20200109
+		boligtype: enebolig
+		byggear: 1988
+		bruttoareal: 132
+		antall soverom: 2
+		pris: 1900000
+		saksbehandler: Siri
+		eier: Trude
+		gateadresse: Byggvegen 4
+		postadresse: 2930 Hamar
+		beskrivelse: Stilig enebolig, noe slitasje, fin utsikt, midt i sentrum med butikker pÃ¥ alle kanter, omkostninger pï¿½ 49000,-
+		areal: 190
+		selveiet: nei
+	oppdrag 12
+		dato: 20160506
+		boligtype: enebolig
+		byggear: 1991
+		bruttoareal: 220
+		antall soverom: 2
+		pris: 2100000
+		saksbehandler: Vegard
+		eier: Morten
+		gateadresse: Ballvegen 22
+		postadresse: 2932 Hamar
+		beskrivelse: koselig enebolig, noe gammelt preg, stor og fin hage, fin utsikt, veldig koselig nabolag, omkostninger pï¿½ 49000,-
+		areal: 280
+		selveiet: ja
+
+sone/område 12 - Brummundal strandlinjen
+	oppdrag 13
+		dato: 20190417
+		boligtype: leilighet
+		byggear: 2002
+		bruttoareal: 165
+		antall soverom: 3
+		pris: 2400000
+		saksbehandler: Ola
+		eier: Rune
+		gateadresse: Hagevegen 55
+		postadresse: 2212 Brummundal
+		beskrivelse: God standard, brummundals mest klassiske bolig, frodig beliggenhet, moderne, praktisk, klar for snarlig overtakelse, omkostninger pï¿½ 56000,-
+	oppdrag 14
+		dato: 20190806
+		boligtype: leilighet
+		byggear: 1979
+		bruttoareal: 150
+		antall soverom: 4
+		pris: 2800000
+		saksbehandler: Siri
+		eier: Geir
+		gateadresse: Vannvegen 81
+		postadresse: 2202 Brummundal
+		beskrivelse: Veldig god standard, nï¿½r matbutikk og skole, fin beliggenhet, moderne preg, romslig, klar for snarlig overtakelse, omkostninger pï¿½ 58000,-
+	oppdrag 15
+		dato: 20181013
+		boligtype: enebolig
+		byggear: 2006
+		bruttoareal: 132
+		antall soverom: 2
+		pris: 1900000
+		saksbehandler: Vegard
+		eier: Trude
+		gateadresse: Kassevegen 4
+		postadresse: 2202 Brummundal
+		beskrivelse: koselig liten enebolig, gammelt preg, trengs en liten oppussing, fin utsikt, under 200 meter til nï¿½rmeste butikk, omkostninger pï¿½ 49000,-
+		areal: 190
+		selveiet: ja
+	oppdrag 16
+		dato: 20200322
+		boligtype: enebolig
+		byggear: 1987
+		bruttoareal: 140
+		antall soverom: 2
+		pris: 2100000
+		saksbehandler: Vegard
+		eier: Morten
+		gateadresse: hogvegen 22
+		postadresse: 2212 Brummundal
+		beskrivelse: koselig enebolig, noe gammelt preg, stor og fin hade, fin utsikt, koselig nabolag, omkostninger pï¿½ 49000,-
+		areal: 210
+		selveiet: ja

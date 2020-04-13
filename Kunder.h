@@ -12,7 +12,7 @@ class Kunder  {
         int sisteNr = 0;
         std::list <Kunde*> kunde;
     public:
-        void leggTil(int tlf, std::ifstream & inn);
+        void leggTil(int kNr, std::ifstream & inn);
         void leggTil();
         void visAlle();
         void visEnKunde(int kNr);

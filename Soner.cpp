@@ -90,7 +90,6 @@ void Soner :: leggTilOppdrag(int soneNr, ifstream & inn){
     auto it = sone.find(soneNr);
     sisteNr++;
     (it->second)->nyBolig(inn);
-
 }
 
 
@@ -103,13 +102,12 @@ void Soner :: leggTilOppdrag(int soneNr){
     auto it = sone.find(soneNr);
     if(it != sone.end()){
         for (const auto & val : sone){
-            if(val.first == soneNr){
+            if(val.first == soneNr){ // hvis sone eksisterer
                 sisteNr++;
-                (val.second)->nyBolig(sisteNr);
-
+                (val.second)->nyBolig(sisteNr); // lager nytt oppdrag/bolig
             }
         }
-    } else {
+    } else {                        // hvis sone IKKE eksisterer
         cout << "\nsone " << soneNr << " eksisterer ikke";
     }
 }

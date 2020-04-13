@@ -26,7 +26,7 @@ extern Soner* gSoner;
 void lesFraFil(){
     // sjekker ikke et feil format/data i DTA, da det er kontrollert at det som blir lagret i DTA er feilfritt.
     int soneNr;
-    int tlf;
+    int kNr;
     string tegn;
     ifstream innfilSoner("SONER.DTA");
     ifstream innfilKunder("KUNDER.DTA");
@@ -49,11 +49,11 @@ void lesFraFil(){
     }
 
     if(innfilKunder){                             // om KUNDER.DTA ble funnet
-       innfilKunder >> tlf;
+       innfilKunder >> kNr;
        innfilKunder.ignore();
        while(!innfilKunder.eof()){                // så lenge det er mer data igjen i KUNDER.DTA
-            gKunder->leggTil(tlf, innfilKunder);       // legger til ny kunde
-            innfilKunder >> tlf;
+            gKunder->leggTil(kNr, innfilKunder);       // legger til ny kunde
+            innfilKunder >> kNr;
             innfilKunder.ignore();
        }
     } else {                                      // om KUNDER.DTA IKKE ble funnet

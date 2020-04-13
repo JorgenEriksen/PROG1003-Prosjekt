@@ -19,14 +19,14 @@ extern Soner* gSoner;
  *  @param   kundeNummer - kundens unike kundenummer
  *  @param   inn - filen det leses inn fra
  */
-Kunde :: Kunde(int tlf, int kundeNummer, ifstream & inn){
+Kunde :: Kunde(int kundeNummer, ifstream & inn){
     char bolig;
     int antallSoner;
     int sone;
 
-    telefonNr = tlf;
     kundeNr = kundeNummer;
-    // inn.ignore();
+    inn >> telefonNr;
+    inn.ignore();
     getline(inn, navn);
     getline(inn, gateadresse);
     getline(inn, postadresse);
@@ -36,10 +36,10 @@ Kunde :: Kunde(int tlf, int kundeNummer, ifstream & inn){
         case 'L': boligtype = Leilighet; break;
         case 'E': boligtype = EBolig; break;
     }
-    inn >> antallSoner;
-    for(int i = 0; i<antallSoner; i++){
+    inn >> antallSoner;                 // leser inn hvor mange soner kunden er interresert i
+    for(int i = 0; i<antallSoner; i++){ // lopper igjen for hver sone kunden er interresert i
         inn >> sone;
-        soneNr.push_back(sone);
+        soneNr.push_back(sone);         // legger til sone
     }
 
 }
@@ -74,8 +74,8 @@ Kunde :: Kunde(int kundeNummer){
 
     do{
         soneNummer = lesInt("Sonenummer kunden er interessert i", 1, MAXSONER);
-        if(gSoner->omSoneEksisterer(soneNummer)){
-            leggTilSone(soneNummer);
+        if(gSoner->omSoneEksisterer(soneNummer)){   //  sjekker om sone eksisterer
+            leggTilSone(soneNummer);                //  legger til sone
         } else {
             cout << "\nsone " << soneNummer << " eksisterer ikke";
         }
@@ -124,29 +124,29 @@ void Kunde :: endreData(){
     } while(valg != 'L' && valg != 'S');
 
     switch(valg){
-    case 'L':
+
+    case 'L':   //  legger til sone
         soneNummer = lesInt("Legg til sonenummer kunden er interessert i", 1, MAXSONER);
-        if(gSoner->omSoneEksisterer(soneNummer)){
+        if(gSoner->omSoneEksisterer(soneNummer)){ //  om sone eksisterer
             leggTilSone(soneNummer);
         } else {
             cout << "\nsone " << soneNummer << " eksisterer ikke\n";
         }
         break;
-    case 'S':
+    case 'S':   //  sletter sone
         soneNummer = lesInt("Sone du vil fjerne fra kunden", 1, MAXSONER);
-        if(gSoner->omSoneEksisterer(soneNummer)){
+        if(gSoner->omSoneEksisterer(soneNummer)){     //  om sone eksisterer
             for(int i=0; i<soneNr.size(); i++){
                 if(soneNr[i] == soneNummer){
-                    soneNr.erase(soneNr.begin()+i);  // fjerner sonenummeret.
+                    soneNr.erase(soneNr.begin()+i);   // fjerner sonenummeret fra vector
                 }
             }
             cout << "Sone " << soneNummer << " fjernet fra kunden!";
-        } else {
+        } else {                                      //  om sone IKKE eksisterer
             cout << "\nIngen soner har dette nummeret";
         }
         break;
     }
-
 }
 
 /**
@@ -213,7 +213,6 @@ void Kunde :: skrivOversiktTilFil(){
     }
 
     cout << "\noversikt over kunde " << kundeNr << " er lagret i " << filnavn;
-
 }
 
 /**
@@ -222,9 +221,8 @@ void Kunde :: skrivOversiktTilFil(){
  *  @param   ut - filen det skrives til
  */
 void Kunde :: skrivTilFil(ofstream & ut){
-    // trenger ikke å skrive kundenummer til fil, da det blir lagt inn riktig ved innlesning pga. sortering
     if(kundeNr != 1) ut << '\n'; // en av flere mulige løsninger for å hindre at det blir et linjeskift formye i starten/slutten.
-    ut << telefonNr << ' ' << navn << '\n';
+    ut << kundeNr << ' ' << telefonNr << ' ' << navn << '\n';
     ut << gateadresse << '\n';
     ut << postadresse << '\n';
     ut << mail << '\n';

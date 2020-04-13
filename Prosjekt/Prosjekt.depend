@@ -8,7 +8,7 @@
 
 1584548137 c:\ntnu\prog1003-prosjekt\lesdata3.h
 
-1586768833 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
+1586770435 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
 	<iostream>
 	<string>
 	"LesData3.h"
@@ -24,11 +24,11 @@
 	"Funksjoner.h"
 	"LesData3.h"
 
-1586702678 c:\ntnu\prog1003-prosjekt\kunder.h
+1586769536 c:\ntnu\prog1003-prosjekt\kunder.h
 	<list>
 	"Kunde.h"
 
-1586767740 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
+1586769723 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
 	<iostream>
 	<string>
 	"Kunde.h"
@@ -36,7 +36,7 @@
 	"LesData3.h"
 	"Const.h"
 
-1586702669 c:\ntnu\prog1003-prosjekt\kunde.h
+1586769566 c:\ntnu\prog1003-prosjekt\kunde.h
 	<string>
 	<vector>
 	<fstream>
@@ -44,7 +44,7 @@
 
 1586701812 c:\ntnu\prog1003-prosjekt\funksjoner.h
 
-1586712382 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
+1586769506 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -54,7 +54,7 @@
 	"Funksjoner.h"
 	"Const.h"
 
-1586767756 source:c:\ntnu\prog1003-prosjekt\sone.cpp
+1586771224 source:c:\ntnu\prog1003-prosjekt\sone.cpp
 	<iostream>
 	<string>
 	<map>

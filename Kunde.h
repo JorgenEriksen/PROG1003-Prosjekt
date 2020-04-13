@@ -21,7 +21,7 @@ class Kunde  {
         Boligtype boligtype;
         std::vector <int> soneNr;
     public:
-        Kunde(int tlf, int kundeNummer, std::ifstream & inn);
+        Kunde(int kundeNummer, std::ifstream & inn);
         Kunde(int kundeNummer);
         void skrivHovedData();
         void skrivAllData();

@@ -2,7 +2,10 @@
  *   Prosjekt oppgave i PROG1003
  *
  *   Programmet fungerer som et program for eiendomsmeglere,
- *   hvor man kan registrere kunder, boligområder, og oppdrag/boliger.
+ *   hvor man kan registrere kunder, boligområder, og oppdrag/boliger, og knytte de opp mot hverandre.
+ *   Programmet lagrer også all data i KUNDER.DTA og SONER.DTA når programmet avsluttes.
+ *   Disse dataene blir automatisk lest inn når programmet starter opp igjen.
+ *
  *
  *   @file     main.cpp
  *   @date     13.04.2020
@@ -34,7 +37,7 @@ int main(){
     gKunder = new Kunder;
     gSoner = new Soner;
 
-    lesFraFil();
+    lesFraFil(); // henter data fra KUNDER.DTA og SONER.DTA
 
     cout << "\nKommando: ";
     getline(cin, input);          // leser inn kommando
@@ -68,5 +71,5 @@ int main(){
         andreKommando = toupper(andreKommando);
     }
 
-    skrivTilFil(); // skriver ut data til KUNDER-DTA og SONER.DTA
+    skrivTilFil(); // skriver ut data til KUNDER.DTA og SONER.DTA
 }

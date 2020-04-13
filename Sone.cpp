@@ -119,8 +119,8 @@ bool Sone :: visBolig(int boligNr){
 bool Sone :: slettBolig(int boligNr){
     for(int i=0; i<bolig.size(); i++){
         if(bolig[i]->returBoligNr() == boligNr){
-            delete bolig[i];
-            return true;
+            bolig.erase(bolig.begin()+i);         //    sletter boligen
+            return true;                          //    returnerer true da boligen er slettet
         }
     }
     return false;
