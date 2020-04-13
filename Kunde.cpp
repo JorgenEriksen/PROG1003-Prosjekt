@@ -19,14 +19,14 @@ extern Soner* gSoner;
  *  @param   kundeNummer - kundens unike kundenummer
  *  @param   inn - filen det leses inn fra
  */
-Kunde :: Kunde(int kundeNummer, ifstream & inn){
+Kunde :: Kunde(int tlf, int kundeNummer, ifstream & inn){
     char bolig;
     int antallSoner;
     int sone;
 
+    telefonNr = tlf;
     kundeNr = kundeNummer;
-    inn >> telefonNr;
-    inn.ignore();
+    // inn.ignore();
     getline(inn, navn);
     getline(inn, gateadresse);
     getline(inn, postadresse);
@@ -42,7 +42,6 @@ Kunde :: Kunde(int kundeNummer, ifstream & inn){
         soneNr.push_back(sone);
     }
 
-    skrivAllData();
 }
 
 /**
@@ -101,8 +100,13 @@ void Kunde :: skrivAllData(){
     cout << "\ngateadresse: " << gateadresse;
     cout << "\npostadresse: " << postadresse;
     cout << "\nmail: " << mail;
-    cout << "\nAntall soner interresert i: " <<soneNr.size();
-    cout << "\nSoner interresert i: ";
+    cout << "\ninterresert i boligtype: ";
+    if(boligtype == Leilighet)
+        cout << "leilighet";
+    else
+        cout << "enebolig";
+    cout << "\nantall soner interresert i: " <<soneNr.size();
+    cout << "\nsoner interresert i: ";
     for(int val : soneNr){
         cout << val << " ";
     }
@@ -198,8 +202,10 @@ void Kunde :: skrivOversiktTilFil(){
     utfil << "\n\ngateadresse: " << gateadresse;
     utfil << "\npostadresse: " << postadresse;
     utfil << "\n\ninteressert i ";
-    if(boligtype == Leilighet) utfil << "leilighet";
-    else utfil << "enebolig";
+    if(boligtype == Leilighet)
+        utfil << "leilighet";
+    else
+        utfil << "enebolig";
     if(soneNr.size() < 1) utfil << "\n\ningen interesserte soner/områder registrert foreløpig";
     else utfil << " i følgende soner/områder: ";
     for(int val : soneNr){
@@ -222,8 +228,10 @@ void Kunde :: skrivTilFil(ofstream & ut){
     ut << gateadresse << '\n';
     ut << postadresse << '\n';
     ut << mail << '\n';
-    if(boligtype == Leilighet) ut << 'L';
-    else ut << 'E';
+    if(boligtype == Leilighet)
+        ut << 'L';
+    else
+        ut << 'E';
     ut << ' ' << soneNr.size();
     for(int val : soneNr){
         ut << ' ' << val;

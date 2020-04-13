@@ -21,8 +21,6 @@ using namespace std;
 Sone :: Sone(int soneNr, ifstream & inn){
     idNummer = soneNr;
     getline(inn, beskrivelse);
-    cout << "\nid:" << idNummer;
-    cout << "\nbeskrivelse:" << beskrivelse;
 
 };
 
@@ -56,7 +54,6 @@ void Sone :: nyBolig(ifstream & inn){
     Bolig* nyBolig;
 
     inn >> boligType;
-    cout << "\nBoligtype: " << boligType;
     switch(boligType){
         case 'L': nyBolig = new Bolig(inn);      break;     // leilighet
         case 'E': nyBolig = new Enebolig(inn);   break;     // enebolig
@@ -97,6 +94,7 @@ void Sone :: visAlleBoliger(){
     }
     cout << "\n";
 }
+
 
 /**
  *  Skriver ut all data om enkelt bolig

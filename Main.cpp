@@ -37,8 +37,8 @@ int main(){
     lesFraFil();
 
     cout << "\nKommando: ";
-    getline(cin, input);
-    stringstream kommando(input);
+    getline(cin, input);          // leser inn kommando
+    stringstream kommando(input); // endrer kommandoen fra string til stringstream
     kommando >> forsteKommando;   // første tegn
     kommando >> andreKommando;    // andre tegn
     kommando >> nummer;           // evt. tredje tegn
@@ -59,11 +59,11 @@ int main(){
         nummer = 0;
 
         cout << "\nKommando: ";
-        getline(cin, input);
-        stringstream kommando(input);
-        kommando >> forsteKommando;  // første tegn
-        kommando >> andreKommando;   // andre tegn
-        kommando >> nummer;          // evt. tredje tegn
+        getline(cin, input);          // leser inn kommando
+        stringstream kommando(input); // endrer kommandoen fra string til stringstream
+        kommando >> forsteKommando;   // første tegn
+        kommando >> andreKommando;    // andre tegn
+        kommando >> nummer;           // evt. tredje tegn
         forsteKommando = toupper(forsteKommando);
         andreKommando = toupper(andreKommando);
     }

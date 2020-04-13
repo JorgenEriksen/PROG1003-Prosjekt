@@ -15,9 +15,9 @@ using namespace std;
  *
  *  @param   inn - filen det leses inn fra
  */
-void Kunder :: leggTil(ifstream & inn){
+void Kunder :: leggTil(int tlf, ifstream & inn){
     sisteNr++;
-    Kunde* nyKunde = new Kunde(sisteNr, inn);
+    Kunde* nyKunde = new Kunde(tlf, sisteNr, inn);
     kunde.push_back(nyKunde);
 }
 
@@ -62,7 +62,7 @@ void Kunder :: visEnKunde(int kNr){
     }
 
     if(!fantKunde){                          // om kundenummer ikke eksisterer
-        cout << "\nfant ingen kunder med kundenummer " << kNr;
+        cout << "\nugyldig kundenummer!";
     }
 
 }
@@ -83,7 +83,7 @@ void Kunder :: endreKunde(int kNr){
     }
 
     if(!fantKunde){                          // om kundenummer ikke eksisterer
-        cout << "\nfant ingen kunder med kundenummer " << kNr;
+        cout << "\nugyldig kundenummer!";
     }
 }
 
@@ -116,7 +116,7 @@ void Kunder :: slettKunde(int kNr){
                 cout << "\nAvbryter sletting av kunde";
         }
     } else {                    // om kundenummer ikke eksisterer
-        cout << "\nFinner ingen kunder med kundenummer " << kNr;
+        cout << "\nugyldig kundenummer!";
     }
 
 }
@@ -136,7 +136,7 @@ void Kunder :: skrivOversiktTilFil(int kNr){
     }
 
     if(!fantKunde){
-        cout << "\nfant ingen kunder med kundenummer " << kNr;
+        cout << "\nugyldig kundenummer!";
     }
 }
 

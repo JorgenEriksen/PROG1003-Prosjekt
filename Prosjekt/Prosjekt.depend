@@ -8,14 +8,14 @@
 
 1584548137 c:\ntnu\prog1003-prosjekt\lesdata3.h
 
-1586685938 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
+1586768833 source:c:\ntnu\prog1003-prosjekt\kunder.cpp
 	<iostream>
 	<string>
 	"LesData3.h"
 	"Kunder.h"
 	"Kunde.h"
 
-1586680164 source:c:\ntnu\prog1003-prosjekt\main.cpp
+1586701857 source:c:\ntnu\prog1003-prosjekt\main.cpp
 	<iostream>
 	<string>
 	<bits/stdc++.h>
@@ -24,11 +24,11 @@
 	"Funksjoner.h"
 	"LesData3.h"
 
-1586685637 c:\ntnu\prog1003-prosjekt\kunder.h
+1586702678 c:\ntnu\prog1003-prosjekt\kunder.h
 	<list>
 	"Kunde.h"
 
-1586685133 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
+1586767740 source:c:\ntnu\prog1003-prosjekt\kunde.cpp
 	<iostream>
 	<string>
 	"Kunde.h"
@@ -36,15 +36,15 @@
 	"LesData3.h"
 	"Const.h"
 
-1586602268 c:\ntnu\prog1003-prosjekt\kunde.h
+1586702669 c:\ntnu\prog1003-prosjekt\kunde.h
 	<string>
 	<vector>
 	<fstream>
 	"Enum.h"
 
-1586374142 c:\ntnu\prog1003-prosjekt\funksjoner.h
+1586701812 c:\ntnu\prog1003-prosjekt\funksjoner.h
 
-1586685352 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
+1586712382 source:c:\ntnu\prog1003-prosjekt\funksjoner.cpp
 	<iostream>
 	<string>
 	<fstream>
@@ -54,7 +54,7 @@
 	"Funksjoner.h"
 	"Const.h"
 
-1586611657 source:c:\ntnu\prog1003-prosjekt\sone.cpp
+1586767756 source:c:\ntnu\prog1003-prosjekt\sone.cpp
 	<iostream>
 	<string>
 	<map>
@@ -63,29 +63,29 @@
 	"Bolig.h"
 	"Enebolig.h"
 
-1586611667 source:c:\ntnu\prog1003-prosjekt\soner.cpp
+1586767665 source:c:\ntnu\prog1003-prosjekt\soner.cpp
 	<iostream>
 	"LesData3.h"
 	"Soner.h"
 	"Sone.h"
 
-1586681141 source:c:\ntnu\prog1003-prosjekt\bolig.cpp
+1586767579 source:c:\ntnu\prog1003-prosjekt\bolig.cpp
 	<iostream>
 	"Bolig.h"
 	"LesData3.h"
 
-1586606959 c:\ntnu\prog1003-prosjekt\soner.h
+1586700599 c:\ntnu\prog1003-prosjekt\soner.h
 	<map>
 	<fstream>
 	"Sone.h"
 
-1586606927 c:\ntnu\prog1003-prosjekt\sone.h
+1586700563 c:\ntnu\prog1003-prosjekt\sone.h
 	<string>
 	<vector>
 	<fstream>
 	"Bolig.h"
 
-1586681074 source:c:\ntnu\prog1003-prosjekt\enebolig.cpp
+1586767759 source:c:\ntnu\prog1003-prosjekt\enebolig.cpp
 	<iostream>
 	"Enebolig.h"
 	"LesData3.h"
@@ -97,8 +97,8 @@
 
 1586258151 c:\ntnu\prog1003-prosjekt\const.h
 
-1586607342 c:\ntnu\prog1003-prosjekt\enebolig.h
+1586700260 c:\ntnu\prog1003-prosjekt\enebolig.h
 	"Bolig.h"
 
-1586258153 c:\ntnu\prog1003-prosjekt\enum.h
+1586700289 c:\ntnu\prog1003-prosjekt\enum.h
 

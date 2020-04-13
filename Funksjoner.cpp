@@ -16,6 +16,7 @@ using namespace std;
 extern Kunder* gKunder;
 extern Soner* gSoner;
 
+
 /**
  *  leser inn data fra KUNDER.DTA og SONER.DTA
  *
@@ -23,8 +24,9 @@ extern Soner* gSoner;
  * @see Kunder::leggTilOppdrag(...)
  */
 void lesFraFil(){
-    // sjekker ikke et feil format/data i DTA, da det er kontrolert at det som blir lagret i DTA er feilfritt.
+    // sjekker ikke et feil format/data i DTA, da det er kontrollert at det som blir lagret i DTA er feilfritt.
     int soneNr;
+    int tlf;
     string tegn;
     ifstream innfilSoner("SONER.DTA");
     ifstream innfilKunder("KUNDER.DTA");
@@ -47,8 +49,12 @@ void lesFraFil(){
     }
 
     if(innfilKunder){                             // om KUNDER.DTA ble funnet
+       innfilKunder >> tlf;
+       innfilKunder.ignore();
        while(!innfilKunder.eof()){                // så lenge det er mer data igjen i KUNDER.DTA
-            gKunder->leggTil(innfilKunder);       // legger til ny kunde
+            gKunder->leggTil(tlf, innfilKunder);       // legger til ny kunde
+            innfilKunder >> tlf;
+            innfilKunder.ignore();
        }
     } else {                                      // om KUNDER.DTA IKKE ble funnet
         cout << "\nFANT IKKE KUNDER.DTA!";
@@ -96,11 +102,11 @@ void sone(char kommando, int nr){
     switch(kommando){
         case 'N':
             if(nr <= MAXSONER && nr > 0) gSoner->leggTil(nr);  // om
-            else cout << "\nsonenummer må være fra 1 til og med " << MAXSONER;
+            else cout << "\nsonenummer må være et tall fra 1 til og med " << MAXSONER;
             break;
         case '1':
             if(nr <= MAXSONER && nr > 0) gSoner->visEnSone(nr);
-            else cout << "\nsonenummer må være fra 1 til og med " << MAXSONER;
+            else cout << "\nsonenummer må være et tall fra 1 til og med " << MAXSONER;
             break;
         case 'A': gSoner->visAlle(); break;
         default: skrivMeny();
@@ -122,15 +128,15 @@ void oppdrag(char kommando, int nr){
     switch(kommando){
         case 'N':
             if(nr <= MAXSONER && nr > 0) gSoner->leggTilOppdrag(nr);
-            else cout << "\nsonenummer må være fra 1 til og med " << MAXSONER;
+            else cout << "\nsonenummer må være et tall fra 1 til og med " << MAXSONER;
             break;
         case '1':
             if(nr <= MAXOPPDRAG && nr > 0) gSoner->visOppdrag(nr);
-            else cout << "\nsonenummer må være fra 1 til og med " << MAXOPPDRAG;
+            else cout << "\noppdragsnummer må være et tall fra 1 til og med " << MAXOPPDRAG;
             break;
         case 'S':
             if(nr <= MAXOPPDRAG && nr > 0) gSoner->slettOppdrag(nr);
-            else cout << "\nsonenummer må være fra 1 til og med " << MAXOPPDRAG;
+            else cout << "\noppdragsnummer må være et tall fra 1 til og med " << MAXOPPDRAG;
             break;
         default: skrivMeny();
     }

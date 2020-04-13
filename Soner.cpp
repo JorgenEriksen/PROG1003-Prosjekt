@@ -16,7 +16,6 @@ using namespace std;
  *  @param   inn - filen det leses inn fra
  */
 void Soner :: leggTil(int soneNr, ifstream & inn){
-    cout << "\nSONESJEKK " << soneNr;
     Sone* nySone = new Sone(soneNr, inn);
     sone.insert(pair <int, Sone*>(soneNr, nySone));
 }
@@ -107,6 +106,7 @@ void Soner :: leggTilOppdrag(int soneNr){
             if(val.first == soneNr){
                 sisteNr++;
                 (val.second)->nyBolig(sisteNr);
+
             }
         }
     } else {
@@ -142,7 +142,7 @@ void Soner :: visOppdrag(int boligNr){
 void Soner :: slettOppdrag(int boligNr){
     char svar = lesChar("er du sikker på at du vil slette denne? (Y/N)");
     if(svar == 'Y'){
-        bool boligFunnet = false; //om bolig er slettet eller funnet;
+        bool boligFunnet = false; // denne blir endret om boligen blir funnet;
         for (const auto & val : sone){
             if((val.second)->slettBolig(boligNr)){ // vis den fant og slettet boligen/oppdraget
                 boligFunnet = true;

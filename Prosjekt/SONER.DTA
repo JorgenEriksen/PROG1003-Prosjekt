@@ -1,32 +1,124 @@
-5 Gjøvik nord
+1 Hamar nord
 b
-L 1 20200101 1993 120 4 2500000
-Ola Normann
-Espen Askeladd
-Gjøvikvegen 10
-2821 Gjøvik
-God standard, rolig beligenhet i nærheten av alt. omkostning på 2400,-.
+L 1 20191011 1999 140 3 2400000
+Ola
+Rune
+Hamarvegen 55
+2929 Hamar
+God standard, n�r alt, beskjeden beliggenhet, moderne preg, praktisk romlosning, klar for snarlig overtakelse, omkostninger p� 56000,-
 b
-E 2 20200203 1999 132 2 2200000
-Ola Normann
-Geir Geirsen
-Gjøvikvegen 49
-2821 Gjøvik
-ok standard, fin beligenhet i nærheten av alt. omkostning på 2400,-.
-120 Y
-9 Gjøvik sør
+L 2 20190503 2010 150 4 2800000
+Ola
+Geir
+Utsiktsvegen 81
+2929 Hamar
+Veldig god standard, n�r matbutikk og skole, fin beliggenhet, moderne preg, romslig, klar for snarlig overtakelse, omkostninger p� 58000,-
 b
-L 3 20200210 1985 140 3 2600000
-Siri Sirisen
-Vegard Vegardsen
-Vegstranden 14
-2821 Gjøvik
-Veldig god standard, rolig beligenhet i nærheten av alt. omkostning på 2400,-.
+E 3 20200203 1975 121 1 1900000
+Siri
+Trude
+Stokkvegen 4
+2932 Hamar
+koselig liten enebolig, gammelt preg, trengs en liten oppussing, fin utsikt, under 200 meter til n�rmeste butikk, omkostninger p� 49000,-
+190 Y
 b
-E 4 20200203 2007 90 3 2700000
-Ola Normann
-Maja Majesen
-Solvegen 89
-2821 Gjøvik
-ok standard, fin beligenhet i nærheten av alt. omkostning på 2400,-.
-80 Y
+E 4 20200404 1988 139 2 2100000
+Siri
+Morten
+Stokkvegen 22
+2932 Hamar
+koselig enebolig, noe gammelt preg, stor og fin hade, fin utsikt, koselig nabolag, omkostninger p� 49000,-
+210 N
+2 Moelv vest
+b
+L 5 20191201 2001 140 3 2400000
+Geir
+Rune
+Moelvvegen 15
+2813 Moelv
+God standard, rett ved strandlinjen, koselig beliggenhet, moderne preg, store rom, klar for snarlig overtakelse, omkostninger p� 56000,-
+b
+L 6 20181122 2005 150 4 2800000
+Ola
+Geir
+Blomstervegen 91
+2818 Moelv
+Høy standard, Fin natur med mye tur muligheter, fin beliggenhet, ok utsikt, klar for snarlig overtakelse, omkostninger p� 58000,-
+b
+E 7 20170911 1999 211 1 3100000
+Vegard
+Trude
+Jernvegen 42
+2818 Moelv
+Stor enebolig, gammelt preg, trengs en liten oppussing, fin utsikt, under 300 meter til n�rmeste butikk, omkostninger p� 49000,-
+260 Y
+b
+E 8 20200225 1989 189 2 2100000
+Vegard
+Morten
+Melvegen 18
+2813 Moelv
+koselig og romslig enebolig, stor altan med fin hage, fin utsikt, koselig nabolag, omkostninger p� 49000,-
+210 N
+11 Hamar sentrum
+b
+L 9 20190619 2011 170 3 2400000
+Ola
+Rune
+Sentrumvegen 55
+2929 Hamar
+Veldig god standard, midt i sentrum, skjelden mulighet, kult design, mega stort bad, klar for snarlig overtakelse, omkostninger p� 56000,-
+b
+L 10 20181224 2000 158 4 2500000
+Siri
+Geir
+Rettvegen 81
+2930 Hamar
+Ok standar, moderne fliser i gangen og badet, god beliggenhet, kult og moderne preg, generelt fin, klar for snarlig overtakelse, omkostninger p� 58000,-
+b
+E 11 20200109 1988 132 2 1900000
+Siri
+Trude
+Byggvegen 4
+2930 Hamar
+Stilig enebolig, noe slitasje, fin utsikt, midt i sentrum med butikker på alle kanter, omkostninger p� 49000,-
+190 N
+b
+E 12 20160506 1991 220 2 2100000
+Vegard
+Morten
+Ballvegen 22
+2932 Hamar
+koselig enebolig, noe gammelt preg, stor og fin hage, fin utsikt, veldig koselig nabolag, omkostninger p� 49000,-
+280 Y
+12 Brummundal strandlinjen
+b
+L 13 20190417 2002 165 3 2400000
+Ola
+Rune
+Hagevegen 55
+2212 Brummundal
+God standard, brummundals mest klassiske bolig, frodig beliggenhet, moderne, praktisk, klar for snarlig overtakelse, omkostninger p� 56000,-
+b
+L 14 20190806 1979 150 4 2800000
+Siri
+Geir
+Vannvegen 81
+2202 Brummundal
+Veldig god standard, n�r matbutikk og skole, fin beliggenhet, moderne preg, romslig, klar for snarlig overtakelse, omkostninger p� 58000,-
+b
+E 15 20181013 2006 132 2 1900000
+Vegard
+Trude
+Kassevegen 4
+2202 Brummundal
+koselig liten enebolig, gammelt preg, trengs en liten oppussing, fin utsikt, under 200 meter til n�rmeste butikk, omkostninger p� 49000,-
+190 Y
+b
+E 16 20200322 1987 140 2 2100000
+Vegard
+Morten
+hogvegen 22
+2212 Brummundal
+koselig enebolig, noe gammelt preg, stor og fin hade, fin utsikt, koselig nabolag, omkostninger p� 49000,-
+210 Y

@@ -77,7 +77,6 @@ void Enebolig :: skrivOversiktTilFil(ofstream & ut){
        << "\n\t\tselveiet: ";
     if(selveiet) ut << "ja";
     else ut << "nei";
-
 }
 
 /**

@@ -33,7 +33,6 @@
 		</Compiler>
 		<Unit filename="../Bolig.cpp" />
 		<Unit filename="../Bolig.h" />
-		<Unit filename="../Class.h" />
 		<Unit filename="../Const.h" />
 		<Unit filename="../Enebolig.cpp" />
 		<Unit filename="../Enebolig.h" />

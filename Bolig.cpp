@@ -17,23 +17,12 @@ using namespace std;
 Bolig :: Bolig(ifstream & inn){
     boligtype = Leilighet; // denne vil bli overskrevet om den blir opprettet fra subklassen Enebolig (via setSomEnebolig())
     inn >> boligNr >> dato >> byggear >> bruttoAreal >> antallSoverom >> pris;
-    cout << "\nboligNr: "       << boligNr;
-    cout << "\ndato: "          << dato;
-    cout << "\nbyggear: "       << byggear;
-    cout << "\nbruttoAreal: "   << bruttoAreal;
-    cout << "\nantallSoverom: " << antallSoverom;
-    cout << "\npris: "          << pris;
     inn.ignore();                //fjerner '\n'
     getline(inn, saksbehandler);
     getline(inn, eier);
     getline(inn, gateadresse);
     getline(inn, postadresse);
     getline(inn, beskrivelse);
-    cout << "\nsaksbehandler: " << saksbehandler;
-    cout << "\neier: "          << eier;
-    cout << "\ngateadresse: "   << gateadresse;
-    cout << "\npostadresse: "   << postadresse;
-    cout << "\nbeskrivelse: "   << beskrivelse;
 }
 
 /**
