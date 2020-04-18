@@ -8,7 +8,6 @@ Prosjektoppgaven gikk ut på å lage et større program som holder orden på opp
 * Hele datastrukturen leses fra/skrives til filer
 
 <br />
-<br />
 
 Tilbakemeldingen:
 
