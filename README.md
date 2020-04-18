@@ -7,6 +7,9 @@ Prosjektoppgaven gikk ut på å lage et større program som holder orden på opp
 * Skrive (til fil) oversikt over alle aktuelle boliger for en kunde
 * Hele datastrukturen leses fra/skrives til filer
 
-Tilbakemeldingen min ser du under
+
+
+Tilbakemeldingen:
+
 
 ![picture](Tilbakemelding.PNG)
