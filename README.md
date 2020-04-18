@@ -9,7 +9,7 @@ Prosjektoppgaven gikk ut på å lage et større program som holder orden på opp
 
 <br />
 
-Tilbakemeldingen:
+Retting og tilbakemelding:
 
 <br />
 <br />
