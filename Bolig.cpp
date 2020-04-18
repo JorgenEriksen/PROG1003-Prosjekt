@@ -17,7 +17,7 @@ using namespace std;
 Bolig :: Bolig(ifstream & inn){
     boligtype = Leilighet; // denne vil bli overskrevet om den blir opprettet fra subklassen Enebolig (via setSomEnebolig())
     inn >> boligNr >> dato >> byggear >> bruttoAreal >> antallSoverom >> pris;
-    inn.ignore();                //fjerner '\n'
+    inn.ignore();                //ignorerer '\n'
     getline(inn, saksbehandler);
     getline(inn, eier);
     getline(inn, gateadresse);
